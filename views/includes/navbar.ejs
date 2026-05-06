@@ -1,25 +1,84 @@
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><i class="fa-solid fa-compass"></i></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link "  href="/">Home</a>
-        <a class="nav-link" href="/listings">All Listings</a>
-        <a class="nav-link" href="/listings/new">Add new Listing</a>
+<nav class="wl-navbar" id="main-navbar">
+  <div class="wl-navbar-inner">
+    <!-- Brand -->
+    <a class="wl-brand" href="/" id="navbar-brand">
+      <div class="wl-brand-icon">
+        <i class="fa-solid fa-compass"></i>
       </div>
-      <div class="navbar-nav ms-auto">
-        <% if(!currUser){ %>
-        <a class="nav-link "  href="/signup">Signup</a>
-        <a class="nav-link" href="/login">Login</a>
-        <% } %> <%if(currUser){ %> 
-        <a class="nav-link" href="/logout">Logout</a>
-        <% } %>
-        
+      <span class="wl-brand-name">WanderLust</span>
+    </a>
 
-      </div>
+    <!-- Center Nav Links -->
+    <div class="wl-nav-links" id="wl-nav-links">
+      <a class="wl-nav-link" href="/" id="nav-home">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+      <a class="wl-nav-link" href="/listings" id="nav-listings">
+        <i class="fa-solid fa-map-location-dot"></i> Explore
+      </a>
+      <a class="wl-nav-link" href="#destinations" id="nav-destinations">
+        <i class="fa-solid fa-globe"></i> Destinations
+      </a>
+      <a class="wl-nav-link" href="#how-it-works" id="nav-how-it-works">
+        <i class="fa-solid fa-circle-info"></i> How It Works
+      </a>
+      <% if(currUser){ %>
+      <a class="wl-nav-link" href="/listings/new" id="nav-add-listing">
+        <i class="fa-solid fa-plus"></i> Add Listing
+      </a>
+      <% } %>
     </div>
+
+    <!-- Right Side Auth -->
+    <div class="wl-nav-auth">
+      <% if(!currUser){ %>
+      <a href="/login" class="wl-btn-login" id="navbar-login-btn">Log in</a>
+      <a href="/signup" class="wl-btn-signup" id="navbar-signup-btn">
+        <i class="fa-solid fa-user-plus"></i> Sign up
+      </a>
+      <% } else { %>
+      <div class="wl-user-menu" id="wl-user-menu">
+        <button class="wl-user-trigger" id="user-menu-trigger" onclick="toggleUserMenu()">
+          <i class="fa-solid fa-bars"></i>
+          <div class="wl-user-avatar">
+            <%= currUser.username.charAt(0).toUpperCase() %>
+          </div>
+        </button>
+        <div class="wl-user-dropdown" id="user-dropdown">
+          <div class="dropdown-greeting">
+            <strong>Hello, <%= currUser.username %>!</strong>
+            <span><%= currUser.email %></span>
+          </div>
+          <div class="dropdown-divider"></div>
+          <a href="/listings" class="dropdown-item-link" id="dd-explore"><i class="fa-solid fa-compass"></i> Explore</a>
+          <a href="/listings/new" class="dropdown-item-link" id="dd-add"><i class="fa-solid fa-plus"></i> Add Listing</a>
+          <div class="dropdown-divider"></div>
+          <a href="/logout" class="dropdown-item-link logout-link" id="dd-logout"><i class="fa-solid fa-right-from-bracket"></i> Log out</a>
+        </div>
+      </div>
+      <% } %>
+
+      <!-- Hamburger for mobile -->
+      <button class="wl-hamburger" id="wl-hamburger" onclick="toggleMobileMenu()" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="wl-mobile-menu" id="wl-mobile-menu">
+    <a href="/" class="mobile-link" id="m-nav-home"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="/listings" class="mobile-link" id="m-nav-explore"><i class="fa-solid fa-map-location-dot"></i> Explore Listings</a>
+    <a href="#destinations" class="mobile-link" id="m-nav-dest"><i class="fa-solid fa-globe"></i> Destinations</a>
+    <a href="#how-it-works" class="mobile-link" id="m-nav-how"><i class="fa-solid fa-circle-info"></i> How It Works</a>
+    <% if(!currUser){ %>
+    <div class="mobile-auth-btns">
+      <a href="/login" class="mobile-login-btn" id="m-login-btn">Log in</a>
+      <a href="/signup" class="mobile-signup-btn" id="m-signup-btn">Sign up</a>
+    </div>
+    <% } else { %>
+    <a href="/listings/new" class="mobile-link" id="m-add-listing"><i class="fa-solid fa-plus"></i> Add Listing</a>
+    <a href="/logout" class="mobile-link mobile-logout" id="m-logout"><i class="fa-solid fa-right-from-bracket"></i> Log out</a>
+    <% } %>
   </div>
 </nav>

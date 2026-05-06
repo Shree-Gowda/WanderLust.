@@ -88,7 +88,7 @@ app.use((req,res,next) => {
 
 
 app.get("/", (req, res) =>{
-    res.render("home.ejs");
+    res.send("Hi, Iam root");
 });
 
 
@@ -109,6 +109,6 @@ app.use((err, req, res, next) => {
     // res.status(statusCode).send(message);
 });
 
-app.listen(8080, () =>{
-    console.log("App is listening to port 8080");
+app.listen(8081, () =>{
+    console.log("App is listening to port 8081");
 })

@@ -1,0 +1,358 @@
+<% layout("/layouts/boilerplate") %>
+
+<!-- Hero Section -->
+<section class="hero-section" id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fa-solid fa-star"></i> Trusted by 2M+ Travelers</div>
+    <h1 class="hero-title">Find Your Perfect<br><span class="hero-highlight">Escape</span></h1>
+    <p class="hero-subtitle">Discover handpicked stays around the world. From cozy mountain cabins to beachfront villas — your dream getaway awaits.</p>
+    <div class="hero-search-bar">
+      <div class="search-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <label>Where</label>
+          <input type="text" placeholder="Search destinations" id="hero-search-input" />
+        </div>
+      </div>
+      <div class="search-divider"></div>
+      <div class="search-item">
+        <i class="fa-regular fa-calendar"></i>
+        <div>
+          <label>Check In</label>
+          <span>Add dates</span>
+        </div>
+      </div>
+      <div class="search-divider"></div>
+      <div class="search-item">
+        <i class="fa-solid fa-user-group"></i>
+        <div>
+          <label>Guests</label>
+          <span>Add guests</span>
+        </div>
+      </div>
+      <a href="/listings" class="hero-search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-number">50K+</span><span class="stat-label">Listings</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-number">180+</span><span class="stat-label">Countries</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-number">2M+</span><span class="stat-label">Happy Guests</span></div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <span>Scroll to explore</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- Category Filters -->
+<section class="categories-section container-fluid" id="categories">
+  <div class="categories-inner">
+    <div class="category-item active" onclick="filterCategory(this, 'all')">
+      <i class="fa-solid fa-border-all"></i>
+      <span>All</span>
+    </div>
+    <div class="category-item" onclick="filterCategory(this, 'beach')">
+      <i class="fa-solid fa-umbrella-beach"></i>
+      <span>Beachfront</span>
+    </div>
+    <div class="category-item" onclick="filterCategory(this, 'mountain')">
+      <i class="fa-solid fa-mountain-sun"></i>
+      <span>Mountains</span>
+    </div>
+    <div class="category-item" onclick="filterCategory(this, 'city')">
+      <i class="fa-solid fa-city"></i>
+      <span>City</span>
+    </div>
+    <div class="category-item" onclick="filterCategory(this, 'cabin')">
+      <i class="fa-solid fa-house-chimney"></i>
+      <span>Cabins</span>
+    </div>
+    <div class="category-item" onclick="filterCategory(this, 'pool')">
+      <i class="fa-solid fa-person-swimming"></i>
+      <span>Pools</span>
+    </div>
+    <div class="category-item" onclick="filterCategory(this, 'luxury')">
+      <i class="fa-solid fa-gem"></i>
+      <span>Luxury</span>
+    </div>
+    <div class="category-item" onclick="filterCategory(this, 'camping')">
+      <i class="fa-solid fa-campground"></i>
+      <span>Camping</span>
+    </div>
+    <div class="category-item" onclick="filterCategory(this, 'island')">
+      <i class="fa-solid fa-sailboat"></i>
+      <span>Islands</span>
+    </div>
+    <div class="category-item" onclick="filterCategory(this, 'historic')">
+      <i class="fa-solid fa-landmark"></i>
+      <span>Historic</span>
+    </div>
+  </div>
+</section>
+
+<!-- Why WanderLust -->
+<section class="features-section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Why WanderLust</span>
+      <h2 class="section-title">Travel with confidence</h2>
+      <p class="section-subtitle">We make every part of your trip — from planning to checkout — beautifully simple.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3>Verified Listings</h3>
+        <p>Every property is manually reviewed and verified by our team before going live on the platform.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3>24/7 Support</h3>
+        <p>Round-the-clock customer care to assist you before, during, and after your stay — anytime, anywhere.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <h3>Secure Payments</h3>
+        <p>Industry-grade encrypted payments so your money and data are always fully protected.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-rotate-left"></i>
+        </div>
+        <h3>Flexible Cancellations</h3>
+        <p>Plans change — our flexible cancellation policies ensure you never lose out on your investment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Destinations -->
+<section class="destinations-section" id="destinations">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Popular Destinations</span>
+      <h2 class="section-title">Explore top places</h2>
+      <p class="section-subtitle">Hand-curated destinations loved by millions of travelers every season.</p>
+    </div>
+    <div class="destinations-grid">
+      <div class="destination-card dest-large">
+        <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80')"></div>
+        <div class="dest-overlay">
+          <h3>Maldives</h3>
+          <p>350+ listings</p>
+          <a href="/listings" class="dest-explore-btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="destination-card">
+        <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&q=80')"></div>
+        <div class="dest-overlay">
+          <h3>Santorini</h3>
+          <p>240+ listings</p>
+          <a href="/listings" class="dest-explore-btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="destination-card">
+        <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=500&q=80')"></div>
+        <div class="dest-overlay">
+          <h3>Bali</h3>
+          <p>510+ listings</p>
+          <a href="/listings" class="dest-explore-btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="destination-card">
+        <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80')"></div>
+        <div class="dest-overlay">
+          <h3>Swiss Alps</h3>
+          <p>180+ listings</p>
+          <a href="/listings" class="dest-explore-btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="destination-card">
+        <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=500&q=80')"></div>
+        <div class="dest-overlay">
+          <h3>Goa</h3>
+          <p>290+ listings</p>
+          <a href="/listings" class="dest-explore-btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-it-works-section" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">How It Works</span>
+      <h2 class="section-title">Book in 3 simple steps</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">01</div>
+        <div class="step-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3>Search & Discover</h3>
+        <p>Browse thousands of unique properties worldwide, filtered by your preferences.</p>
+      </div>
+      <div class="step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="step-card">
+        <div class="step-number">02</div>
+        <div class="step-icon"><i class="fa-regular fa-calendar-check"></i></div>
+        <h3>Book Instantly</h3>
+        <p>Reserve your dates with a few clicks. No hidden fees, transparent pricing always.</p>
+      </div>
+      <div class="step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="step-card">
+        <div class="step-number">03</div>
+        <div class="step-icon"><i class="fa-solid fa-plane-departure"></i></div>
+        <h3>Pack & Go</h3>
+        <p>Your host will be ready. Just show up and enjoy your perfect getaway.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Testimonials</span>
+      <h2 class="section-title">Loved by travelers</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">"WanderLust made our Maldives trip absolutely perfect. The villa was exactly as described, and the host was incredibly welcoming. 10/10 would recommend!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2)">A</div>
+          <div>
+            <strong>Ananya Sharma</strong>
+            <span>Mumbai, India</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card featured-testimonial">
+        <div class="testimonial-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">"I've used many travel platforms, but nothing comes close to WanderLust. The listings are genuine, the booking process is seamless, and the support team is superb."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c)">R</div>
+          <div>
+            <strong>Rohan Mehta</strong>
+            <span>Bangalore, India</span>
+          </div>
+        </div>
+        <div class="testimonial-featured-badge"><i class="fa-solid fa-quote-left"></i></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">"The Swiss Alps cabin we found here was a dream! Incredibly beautiful, clean, and cozy. WanderLust curates only the best — you won't be disappointed."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe)">P</div>
+          <div>
+            <strong>Priya Nair</strong>
+            <span>Delhi, India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Become a Host CTA -->
+<section class="host-cta-section" id="become-host">
+  <div class="host-cta-content">
+    <div class="host-cta-text">
+      <span class="section-badge light-badge">For Hosts</span>
+      <h2>Turn your space into income</h2>
+      <p>Join thousands of hosts earning extra income by sharing their properties on WanderLust. It's simple, flexible, and rewarding.</p>
+      <div class="host-perks">
+        <div class="perk"><i class="fa-solid fa-check"></i> Free to list your property</div>
+        <div class="perk"><i class="fa-solid fa-check"></i> Set your own prices & rules</div>
+        <div class="perk"><i class="fa-solid fa-check"></i> Earn up to ₹1,50,000/month</div>
+        <div class="perk"><i class="fa-solid fa-check"></i> Host protection included</div>
+      </div>
+      <div class="host-cta-btns">
+        <a href="/listings/new" class="btn-host-primary" id="become-host-btn">Start Hosting <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="/listings" class="btn-host-secondary">Learn More</a>
+      </div>
+    </div>
+    <div class="host-cta-image">
+      <div class="host-img-card">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80" alt="Beautiful property" />
+        <div class="host-img-badge">
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+          <div>
+            <strong>₹80,000</strong>
+            <span>earned this month</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- App Download -->
+<section class="app-section" id="app">
+  <div class="container">
+    <div class="app-content">
+      <div class="app-text">
+        <span class="section-badge">Mobile App</span>
+        <h2>Travel smarter with our app</h2>
+        <p>Download the WanderLust app and manage your bookings, discover deals, and communicate with hosts — all on the go.</p>
+        <div class="app-badges">
+          <a href="#" class="app-badge-btn" id="app-store-btn">
+            <i class="fa-brands fa-apple"></i>
+            <div><span>Download on</span><strong>App Store</strong></div>
+          </a>
+          <a href="#" class="app-badge-btn" id="play-store-btn">
+            <i class="fa-brands fa-google-play"></i>
+            <div><span>Get it on</span><strong>Google Play</strong></div>
+          </a>
+        </div>
+      </div>
+      <div class="app-mockup">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-top-bar"></div>
+            <div class="phone-listing-card">
+              <div class="phone-img"></div>
+              <div class="phone-info">
+                <div class="phone-title-bar"></div>
+                <div class="phone-price-bar"></div>
+                <div class="phone-stars">★★★★★</div>
+              </div>
+            </div>
+            <div class="phone-listing-card">
+              <div class="phone-img phone-img-2"></div>
+              <div class="phone-info">
+                <div class="phone-title-bar"></div>
+                <div class="phone-price-bar"></div>
+                <div class="phone-stars">★★★★★</div>
+              </div>
+            </div>
+            <div class="phone-nav-bar">
+              <i class="fa-solid fa-house"></i>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-regular fa-user"></i>
+            </div>
+          </div>
+        </div>
+        <div class="phone-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
